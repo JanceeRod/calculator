@@ -1,20 +1,35 @@
-let firstNum = 0;
-let secondNum = 0;
-let operator = ""
+let firstNum = null;
+let secondNum = null;
+let operator = null;
+let isOperatorClicked = false
 
 const equation = document.getElementById('operation')
-const equationDisplay = equation.textContent
-
 const inputOutput = document.getElementById('input-result')
 
-const numOperContainer = document.getElementsByClassName('row')
 const numberButttons = document.getElementsByClassName('numbers')
+const operationButtons = document.getElementsByClassName('operations')
 
 for (let i = 0; i < numberButttons.length; i++) {
-    numberButttons[i].addEventListener('click', () => {
+    numberButttons[i].addEventListener('click', function() {
         inputOutput.textContent += numberButttons[i].textContent
+        if (isOperatorClicked) {
+            secondNum = parseFloat(inputOutput.textContent)
+        }
+        else {
+            firstNum = parseFloat(inputOutput.textContent)
+        }
     })
 }
+
+for (let j = 0; j < operationButtons.length; j++) {  
+    operationButtons[j].addEventListener('click', () => {
+        isOperatorClicked = true
+        inputOutput.textContent = ""
+        operator = operationButtons.textContent
+
+    })
+}
+
 
 function addition(first, second) {
     return first + second
