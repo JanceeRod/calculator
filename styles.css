@@ -7,7 +7,7 @@ body {
 }
 
 #header {
-    background-color: antiquewhite;
+    background-color: rgb(255, 228, 193);
     font-family: 'DM Sans', sans-serif;
     font-weight: bolder;
     font-size: xx-large;
@@ -15,4 +15,42 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    margin-top: 50px;
+}
+
+#calculator-body {
+    border: solid black;
+    border-radius: 15px;
+    background-color: blanchedalmond;
+    width: 400px;
+    height: 500px;
+    padding: 30px;
+}
+
+#upper {
+    border: solid cyan;
+    margin-bottom: 20px;
+}
+
+#screen {
+    /* border: solid brown; */
+    background-color: rgb(255, 255, 255);
+}
+
+#operation {
+    border: solid green
+}
+
+#input-result {
+    border: solid olive;
+}
+
+#lower {
+    border: solid red;
 }
