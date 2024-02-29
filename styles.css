@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700;9..40,1000&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=League+Spartan:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+* {
+    user-select: none;
+}
+
 body {
     margin: 0px;
     padding: 0px;
@@ -40,7 +44,7 @@ body {
 
 #screen {
     border: solid black;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 247, 238);
     border-radius: 10px;
     padding: 5px;
     height: 80px;
@@ -76,11 +80,11 @@ body {
 }
 
 .rm-button {
-  background-color: #fbeee0;
-  border: 2px solid #422800;
+  background-color: #ff4444;
+  border: 2px solid #771111;
   border-radius: 8px;
-  box-shadow: #422800 4px 4px 0 0;
-  color: #422800;
+  box-shadow: #771111 4px 4px 0 0;
+  color: #fdf8f1;
   cursor: pointer;
   font-family: "League Spartan", sans-serif;
   font-weight: bold;
@@ -90,10 +94,40 @@ body {
 }
 
 .rm-button:hover {
-  background-color: #f0dcc6;
+  background-color: #e93d3d;
 }
 
 .rm-button:active {
   box-shadow: #422800 2px 2px 0 0;
   transform: translate(2px, 2px);
 }
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.row button {
+    background-color: #fbeee0;
+    border: 2px solid #a06969;
+    border-radius: 8px;
+    box-shadow: #e29292 4px 4px 0 0;
+    color: #422800;
+    cursor: pointer;
+    width: 80px;
+    height: 70px;
+    font-family: "League Spartan", sans-serif;
+    font-weight: bold;
+    font-size: larger;
+  }
+  
+  .row button:hover {
+    background-color: #faeee6;
+  }
+  
+  .row button:active {
+    box-shadow: #e29292 2px 2px 0 0;
+    transform: translate(2px, 2px);
+  }
